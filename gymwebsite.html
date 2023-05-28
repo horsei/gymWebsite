@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planet Fitness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+
+    body {
+      margin: 0px;
+      padding: 0px;
+      background: url("https://www.muscleandfitness.com/wp-content/uploads/2019/07/Hands-Clapping-Chaulk-Kettlebell.jpg?quality=86&strip=all");
+      color: rgb(241, 230, 230);
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: Oswald;
+    }
+    .left {
+      display: inline-block;
+      position: absolute;
+      left: 24px;
+      top: 0px;
+    }
+    .right {
+      position: absolute;
+      right: 34px;
+      top: 30px;
+      display: inline-block;
+    }
+    .mid {
+      border: 2px;
+      display: block;
+      width: 33%;
+      margin: 20px auto;
+    }
+    .navbar {
+      display: inline-block;
+    }
+    .navbar li {
+      display: inline-block;
+      font-size: 18px;
+    }
+    .navbar li a {
+      color: white;
+      text-decoration: none;
+      padding: 34px 15px;
+      font: 25px;
+    }
+    .navbar li a:hover,
+    .navbar li a.active {
+      text-decoration: underline;
+      color: grey;
+    }
+    .left img {
+      width: 100px;
+    }
+    .left div {
+      text-align: center;
+    }
+    .btn {
+      color: white;
+      background-color: transparent;
+      padding: 4px 14px;
+      border-radius: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      border: none;
+      font-family: Oswald;
+    }
+    .btn:hover {
+      background-color: rgb(78, 75, 75);
+    }
+    .container {
+      border: 2px solid white;
+      margin: 106px 80px;
+      padding: 75px;
+      width: 35%;
+      border-radius: 28px;
+    }
+    .form-group input {
+      text-align: center;
+      display: block;
+      width: 508px;
+      padding: 1px;
+      border: 2px solid black;
+      margin: 11px auto;
+      border-radius: 8px;
+    }
+    .container h1 {
+      text-align: center;
+    }
+    .container button {
+      display: block;
+      width: 98%;
+      margin: 20px auto;
+      padding: 0px;
+    }
+  </style>
+  <body>
+    <header class="header">
+      <div class="left">
+        <img
+          src="data:image/png;base64,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"
+          alt=""
+        />
+        <div></div>
+      </div>
+      <div class="mid">
+        <ul class="navbar">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Fitness Calculator</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <button class="btn">Report Issue</button>
+        <button class="btn">Email Us</button>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Join the best Gym in Mumbai now!</h1>
+      <form action="noaction.php">
+        <div class="form-group">
+          <input type="text" name="" placeholder="Enter your Name" />
+        </div>
+        <div class="form-group">
+          <input type="text" name="" placeholder="Enter your Age" />
+        </div>
+        <div class="form-group">
+          <input type="text" name="" placeholder="Enter your Gender" />
+        </div>
+        <div class="form-group">
+          <input type="text" name="" placeholder="Enter your Locality" />
+        </div>
+        <button class="btn">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
